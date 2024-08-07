@@ -4,6 +4,7 @@ import argparse
 import cv2
 from src.classifier import PlayerClassifier
 from src.tracker import Tracker
+from tqdm import tqdm
 
 def get_args():
     # Set up argument parser for command-line arguments
@@ -57,12 +58,11 @@ def inference(args):
     mask = cv2.imread("images/fb_mask.jpg")
     #tracking players
     tracker = Tracker()
-
-    counter = 0
-    while cap.isOpened():
-        counter += 1
-        if counter % 2 == 0:
-            print(counter)
+    #set progress bar to see the inference phase
+    counter = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    progress_bar = tqdm(range(counter), colour='cyan')
+    for idx in progress_bar:
+        progress_bar.set_description("Frame: {}/{}".format(idx,counter))
 
         flag, ori_frame = cap.read()
         #create a detection area

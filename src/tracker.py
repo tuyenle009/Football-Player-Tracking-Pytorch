@@ -1,5 +1,6 @@
 import cv2
 
+
 class Tracker:
     def _draw_ellipse(self, img, xyxy, xywh, color):
         # Unpack coordinates and dimensions
@@ -30,7 +31,10 @@ class Tracker:
         # Draw the filled rectangle
         cv2.rectangle(img, (x1, y1), (x2, y2), color, cv2.FILLED)
         # Draw the track_id text
-        cv2.putText(img, "{}".format(track_id), text_pos, cv2.FONT_HERSHEY_SIMPLEX, 0.6, (100, 50, 255), 2)
+        txt_color = (0, 0, 0)
+        if color == (0, 0, 0):
+            txt_color = (255, 255, 255)
+        cv2.putText(img, "{}".format(track_id), text_pos, cv2.FONT_HERSHEY_SIMPLEX, 0.6, txt_color, 2)
         return img
 
     def draw_annotations(self, img, bbox, color, track_id):
