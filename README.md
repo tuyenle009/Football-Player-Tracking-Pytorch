@@ -68,7 +68,6 @@ python playertracker.py
 ```
 The demo output can be generated with the default settings. Simply place your output.mp4 inside a demo directory 
 
-#### Use Docker:
 ## Issues
 You might encounter a few issues if you do the following:
 -   Running the code without downloading the files and placing them in the corresponding folders.
