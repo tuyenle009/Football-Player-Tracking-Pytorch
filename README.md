@@ -23,15 +23,15 @@ Welcome to my Football Player Tracking project! This repository showcases an exc
 cuda 12.2 is used in this project.
 ```
 #clone the repo
-git clone https://github.com/
+git clone https://github.com/tuyenle009/Football-Player-Tracking-Pytorch.git
 #go to the directory
-cd Football-Player-Tracking /
+cd Football-Player-Tracking-Pytorch
 ```
 Download the files and place them in the corresponding directory:
 - [Checkpoints](https://drive.google.com/drive/folders/1f06spe35yA8MQIb15vkeYIVbKpBgdfv5?usp=drive_link)
 - [Videos](https://drive.google.com/drive/folders/1ECYkrl1lAyLFkAq2HjUjtm3OkwnglN9D?usp=sharing)
  ```
-  Football-Player-Tracking
+  Football-Player-Tracking-Pytorch
   ├── checkpoints
   │   ├── player_classification.pt  
   │   ├── player_detector.pt
