@@ -3,12 +3,14 @@
 ## Introduction
 Welcome to my Football Player Tracking project! This repository showcases an exciting application of deep learning in sports analytics. The goal of this project is to track football players based on their team jerseys and player numbers using a combination of state-of-the-art models: YOLOv5 and ResNet50.
 ## Demo
+#### Overall
+
+![output](https://github.com/user-attachments/assets/36fd3105-62ff-4398-8007-da0a8be677ff)
 ![Screenshot from output mp4](https://github.com/user-attachments/assets/23e33ac4-22ca-4dc2-8f7d-d53b96051f67)
 
+#### Players Detection
 ![screenshot](https://github.com/user-attachments/assets/7275ab8f-b1ec-4435-a0c7-dfdcb50789fd) | ![screenshot](https://github.com/user-attachments/assets/dc96d18d-b3b8-41db-964b-db0213723fb5)|![screenshot](https://github.com/user-attachments/assets/b62e7f5a-344e-463e-9cf8-44f27e88b77d)|![screenshot](https://github.com/user-attachments/assets/3dda4a81-f3cf-460a-8880-b3012193c8a4)
 |-|-|-|-|
-
-
 
 ## Project Highlights
 -   **YOLOv5 for Object Detection**: Utilized to accurately detect and localize players on the field.
@@ -57,11 +59,16 @@ docker build -t playertracker .
 #run docker image
 #If your laptop does not have a GPU, please drop this "--gpus 0" 
 docker run -it --gpus 0 playertracker
+```
+
+## Usage
+```
 #start to detect and classifier players
 python playertracker.py
 ```
-*''Then come to demo folder to watch results.''*
+The demo output can be generated with the default settings. Simply place your output.mp4 inside a demo directory 
 
+#### Use Docker:
 ## Issues
 You might encounter a few issues if you do the following:
 -   Running the code without downloading the files and placing them in the corresponding folders.
