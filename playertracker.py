@@ -98,6 +98,7 @@ def inference(args):
         for (xmin, ymin, xmax, ymax, _, _), n, u, t in zip(det_pred.xyxy[0], num_digits, unit_digit, team):
             bbox = [int(xmin), int(ymin), int(xmax), int(ymax)]
             u = u.item()
+            #if jersey number is obscured
             if n == 2 or u == 10:
                 jersey_number = 0
             else:
